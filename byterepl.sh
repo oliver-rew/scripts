@@ -31,7 +31,7 @@ xxd -ps $BIN | \
   # at this point we want to use this stream of bytes to both replace the byte
   # sequence and also count the number of instances of the original pattern.
   # Use tee the split the output into 2 separate streams
-  tee >(\
+  tee >(
 
   # in a tee sub-shell use sed and xxd to replace the byte sequence and
   # re-encode as the file and copy the original permissions
